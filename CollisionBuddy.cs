@@ -47,7 +47,7 @@ namespace CollisionBuddy
 			// the circles is less than the radii sum when it’s at a minimum. Therefore find the time
 			// when the distance is at a minimum and test this
 			float tmin = -pv / vv;
-			return (pp + pv * tmin > 0);
+			return (pp + pv * tmin < 0);
 		}
 
 		/// <summary>
