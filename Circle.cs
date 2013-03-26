@@ -132,6 +132,26 @@ namespace CollisionBuddy
 			return myVect.Length();
 		}
 
+		/// <summary>
+		/// move teh circle
+		/// </summary>
+		/// <param name="x">the amount to move on the x plane</param>
+		/// <param name="y">amount to move on the y plane</param>
+		public void Translate(float x, float y)
+		{
+			_Position.X += x;
+			_Position.Y += y;
+		}
+
+		/// <summary>
+		/// move teh circle
+		/// </summary>
+		/// <param name="delta">the amount to move</param>
+		public void Translate(Vector2 delta)
+		{
+			_Position += delta;
+		}
+
 		#endregion //Methods
 	}
 }

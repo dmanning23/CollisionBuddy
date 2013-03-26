@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 namespace CollisionBuddy
 {
-	static class CollisionBuddy
+	public static class CollisionCheck
 	{
 		/// <summary>
 		/// Check for collision between two circles
@@ -163,8 +163,6 @@ namespace CollisionBuddy
 				}
 			}
 		}
-
-		//TODO: put the cirlce in a box and check if it tries to leave!
 
 		/// <summary>
 		/// Given a rect and a circle that we assume is in that rect... 
