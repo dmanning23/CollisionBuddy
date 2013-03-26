@@ -91,14 +91,26 @@ namespace CollisionBuddy
 
 		/// <summary>
 		/// Set teh initial values of this circle
+		/// It's SUPER important that this method is used first, because it sets up both the old and current position
 		/// </summary>
-		/// <param name="position"></param>
-		/// <param name="radius"></param>
+		/// <param name="position">the initial position</param>
+		/// <param name="radius">the initial radius</param>
 		public void Initialize(Vector2 position, float radius)
 		{
 			_Position = position;
 			OldPos = position;
 			Radius = radius;
+		}
+
+		/// <summary>
+		/// Set teh initial values of this circle
+		/// It's SUPER important that this method is used first, because it sets up both the old and current position
+		/// </summary>
+		/// <param name="position">the initial position as a point</param>
+		/// <param name="radius">the initial radius</param>
+		public void Initialize(Point position, float radius)
+		{
+			Initialize(new Vector2(position.X, position.Y), radius);
 		}
 
 		/// <summary>
@@ -139,6 +151,10 @@ namespace CollisionBuddy
 		/// <param name="y">amount to move on the y plane</param>
 		public void Translate(float x, float y)
 		{
+			//update the old position
+			OldPos = _Position;
+
+			//set teh new postiionh
 			_Position.X += x;
 			_Position.Y += y;
 		}
@@ -149,6 +165,10 @@ namespace CollisionBuddy
 		/// <param name="delta">the amount to move</param>
 		public void Translate(Vector2 delta)
 		{
+			//update the old position
+			OldPos = _Position;
+
+			//add the change to the position
 			_Position += delta;
 		}
 

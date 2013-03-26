@@ -21,32 +21,33 @@ namespace CollisionBuddy
 			float dy = B.OldPos.Y - A.OldPos.Y;
 
 			// check if circles are already colliding
-			float sqRadiiSum = A.RadiusSquared + B.RadiusSquared;
-			float pp = dx*dx + dy*dy - sqRadiiSum;
-			if(pp < 0) 
+			float sqRadiiSum = A.Radius + B.Radius;
+			sqRadiiSum *= sqRadiiSum;
+			float pp = dx * dx + dy * dy - sqRadiiSum;
+			if (pp < 0)
 			{
-				return true; 
+				return true;
 			}
 
 			// check if the circles are moving away from each other and hence can’t collide
-			float pv = dx*dvx + dy*dvy;
-			if(pv >= 0) 
+			float pv = dx * dvx + dy * dvy;
+			if (pv >= 0)
 			{
-				return false; 
+				return false;
 			}
 
 			// check if the circles can reach each other between the frames
-			float vv = dvx*dvx + dvy*dvy;
-			if((pv + vv) <= 0 && (vv + 2*pv + pp) >= 0) 
+			float vv = dvx * dvx + dvy * dvy;
+			if ((pv + vv) <= 0 && (vv + 2 * pv + pp) >= 0)
 			{
-				return false; 
+				return false;
 			}
 
 			// if we've gotten this far then it’s possible for intersection if the distance between
 			// the circles is less than the radii sum when it’s at a minimum. Therefore find the time
 			// when the distance is at a minimum and test this
 			float tmin = -pv / vv;
-			return (pp + pv*tmin > 0);
+			return (pp + pv * tmin > 0);
 		}
 
 		/// <summary>
