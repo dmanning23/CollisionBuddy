@@ -9,4 +9,6 @@ It also checks for circle-line collision, but that one doesn't prevent tunneling
 
 There is a cirlce-rect check in there that also checks for tunnelling.  Assume you have an axis aligned box, you want the circle to stay inside that box.  This method checks if it is touching or outside the walls, and if it is gives you a vector you can add to the circle position to put it back inside the box.
 
+For an example of how to use this dude, check out the sample at https://github.com/dmanning23/CollisionBuddySample
+
 Cheers!
