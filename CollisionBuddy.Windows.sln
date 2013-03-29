@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollisionBuddy.Windows", "CollisionBuddy.Windows.csproj", "{3EB0132F-9AAF-465C-8E7C-8880BBE6D600}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollisionBuddy.Windows", "CollisionBuddy\CollisionBuddy.Windows.csproj", "{3EB0132F-9AAF-465C-8E7C-8880BBE6D600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
