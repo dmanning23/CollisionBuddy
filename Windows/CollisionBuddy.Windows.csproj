@@ -43,16 +43,16 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="..\..\Source\Circle.cs">
+    <Compile Include="..\Source\Circle.cs">
       <Link>Circle.cs</Link>
     </Compile>
-    <Compile Include="..\..\Source\CollisionBuddy.cs">
+    <Compile Include="..\Source\CollisionBuddy.cs">
       <Link>CollisionBuddy.cs</Link>
     </Compile>
-    <Compile Include="..\..\Source\Line.cs">
+    <Compile Include="..\Source\Line.cs">
       <Link>Line.cs</Link>
     </Compile>
-    <Compile Include="..\..\Source\Properties\AssemblyInfo.cs">
+    <Compile Include="..\Source\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
   </ItemGroup>
