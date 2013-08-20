@@ -23,7 +23,7 @@ namespace CollisionBuddy
 		/// <summary>
 		/// The center point of this circle
 		/// </summary>
-		private Vector2 _Position = Vector2.Zero;
+		protected Vector2 _Position = Vector2.Zero;
 
 		#endregion //Members
 

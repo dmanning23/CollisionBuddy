@@ -13,12 +13,12 @@ namespace CollisionBuddy
 		/// <summary>
 		/// The start point of this vector
 		/// </summary>
-		private Vector2 _Start = Vector2.Zero;
+		protected Vector2 _Start = Vector2.Zero;
 
 		/// <summary>
 		/// The end point of this vector
 		/// </summary>
-		private Vector2 _End = Vector2.Zero;
+		protected Vector2 _End = Vector2.Zero;
 
 		#endregion //Members
 
@@ -63,30 +63,22 @@ namespace CollisionBuddy
 		/// <summary>
 		/// The last position of the start point
 		/// </summary>
-		public Vector2 OldStart
-		{
-			get;
-			set;
-		}
+		public Vector2 OldStart { get; protected set; }
 
 		/// <summary>
 		/// The last position of the end point
 		/// </summary>
-		public Vector2 OldEnd
-		{
-			get;
-			set;
-		}
+		public Vector2 OldEnd { get; protected set; }
 
 		/// <summary>
 		/// the length of the line, world units
 		/// </summary>
-		public float Length { get; private set; }
+		public float Length { get; protected set; }
 
 		/// <summary>
 		/// unit vector, the direction of the line
 		/// </summary>
-		public Vector2 Direction { get; private set; }
+		public Vector2 Direction { get; protected set; }
 
 		#endregion //Properties
 
