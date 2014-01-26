@@ -90,6 +90,16 @@ namespace CollisionBuddy
 		}
 
 		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="position"></param>
+		/// <param name="radius"></param>
+		public Circle(Vector2 position, float radius)
+		{
+			Initialize(position, radius);
+		}
+
+		/// <summary>
 		/// Set teh initial values of this circle
 		/// It's SUPER important that this method is used first, because it sets up both the old and current position
 		/// </summary>
