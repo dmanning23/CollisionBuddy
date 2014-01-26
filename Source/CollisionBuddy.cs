@@ -86,9 +86,6 @@ namespace CollisionBuddy
 		/// <returns>true if the circle and line are colliding, false if not</returns>
 		public static bool CircleLineCollision(Circle A, Line B, ref Vector2 ClosestPointA, ref Vector2 ClosestPointB)
 		{
-			//get the vector of the line segment
-			Vector2 lineVect = B.End - B.Start;
-
 			//get the vector from the circle center to the start of the line segment
 			Vector2 CV = A.Pos - B.Start;
 
@@ -118,6 +115,9 @@ namespace CollisionBuddy
 			}
 			else if (ProjL > B.Length)
 			{
+				//get the vector of the line segment
+				Vector2 lineVect = B.End - B.Start;
+
 				//The second point of the line segment is the closest
 				Vector2 CV2 = CV - lineVect;
 				float cv2Dot = Vector2.Dot(CV2, CV2);

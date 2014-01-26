@@ -80,6 +80,11 @@ namespace CollisionBuddy
 		/// </summary>
 		public Vector2 Direction { get; protected set; }
 
+		/// <summary>
+		/// unit vector perpendicular to the line
+		/// </summary>
+		public Vector2 Normal { get; protected set; }
+
 		#endregion //Properties
 
 		#region Methods
@@ -93,6 +98,17 @@ namespace CollisionBuddy
 			OldEnd = Vector2.Zero;
 			Length = 0.0f;
 			Direction = Vector2.Zero;
+			Normal = Vector2.Zero;
+		}
+
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="start">start point of the line</param>
+		/// <param name="end">end point of the line</param>
+		public Line(Vector2 start, Vector2 end)
+		{
+			Initialize(start, end);
 		}
 
 		/// <summary>
@@ -118,6 +134,24 @@ namespace CollisionBuddy
 			Direction = End - Start;
 			Length = Direction.Length();
 			Direction.Normalize();
+			CalculateNormal();
+		}
+
+		/// <summary>
+		/// Calculate the uniot vector perpendicular to the line.
+		/// </summary>
+		private void CalculateNormal()
+		{
+			Normal = new Vector2(-Direction.Y, Direction.X);
+		}
+
+		/// <summary>
+		/// Get the center point of the line
+		/// </summary>
+		/// <returns></returns>
+		public Vector2 Center()
+		{
+			return (Start + End) / 2.0f;
 		}
 
 		#endregion //Methods
