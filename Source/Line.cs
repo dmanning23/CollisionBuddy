@@ -22,6 +22,11 @@ namespace CollisionBuddy
 		/// </summary>
 		protected Vector2 _End = Vector2.Zero;
 
+		/// <summary>
+		/// unit vector, the direction of the line
+		/// </summary>
+		protected Vector2 _direction = Vector2.Zero;
+
 		#endregion //Members
 
 		#region Properties
@@ -80,7 +85,18 @@ namespace CollisionBuddy
 		/// <summary>
 		/// unit vector, the direction of the line
 		/// </summary>
-		public Vector2 Direction { get; protected set; }
+		public Vector2 Direction 
+		{
+			get
+			{
+				return _direction;
+			}
+			protected set
+			{
+				//this better be a unit vector!
+				_direction = value;
+			}
+		}
 
 		/// <summary>
 		/// unit vector perpendicular to the line
@@ -135,7 +151,7 @@ namespace CollisionBuddy
 			//set teh length and direction
 			Direction = End - Start;
 			Length = Direction.Length();
-			Direction.Normalize();
+			_direction.Normalize();
 			CalculateNormal();
 		}
 
@@ -157,11 +173,11 @@ namespace CollisionBuddy
 		}
 
 		/// <summary>
-		/// Given a rectangle, create a list of lines with the normals pointing out
+		/// Given a rectangle, create a list of lines with the normals pointing in
 		/// </summary>
 		/// <param name="rect"></param>
 		/// <returns></returns>
-		public static List<Line> OutsideRect(Rectangle rect)
+		public static List<Line> InsideRect(Rectangle rect)
 		{
 			List<Line> lines = new List<Line>();
 
@@ -181,11 +197,11 @@ namespace CollisionBuddy
 		}
 
 		/// <summary>
-		/// Given a rectangle, create a list of lines with the normals pointing in
+		/// Given a rectangle, create a list of lines with the normals pointing out
 		/// </summary>
 		/// <param name="rect"></param>
 		/// <returns></returns>
-		public static List<Line> InsideRect(Rectangle rect)
+		public static List<Line> OutsideRect(Rectangle rect)
 		{
 			List<Line> lines = new List<Line>();
 
@@ -215,7 +231,9 @@ namespace CollisionBuddy
 			prim.Line(Start, End, color);
 
 			//draw the normal
-			prim.Line(Center(), Center() + (Normal * (Length * 0.1f)), color);
+			Vector2 normalStart = Center();
+			Vector2 normalEnd = Center() + (Normal * 10.0f);
+			prim.Line(normalStart, normalEnd, color);
 		}
 
 		#endregion //Methods
