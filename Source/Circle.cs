@@ -1,5 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using System;
+using BasicPrimitiveBuddy;
 
 namespace CollisionBuddy
 {
@@ -180,6 +181,16 @@ namespace CollisionBuddy
 
 			//add the change to the position
 			_Position += delta;
+		}
+
+		/// <summary>
+		/// draw the circle
+		/// </summary>
+		/// <param name="prim"></param>
+		/// <param name="color"></param>
+		public void Draw(IBasicPrimitive prim, Color color)
+		{
+			prim.Circle(Pos, Radius, color);
 		}
 
 		#endregion //Methods

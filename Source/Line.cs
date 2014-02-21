@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BasicPrimitiveBuddy;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using Vector2Extensions;
 
 namespace CollisionBuddy
 {
@@ -142,7 +144,7 @@ namespace CollisionBuddy
 		/// </summary>
 		private void CalculateNormal()
 		{
-			Normal = new Vector2(-Direction.Y, Direction.X);
+			Normal = Direction.Perp();
 		}
 
 		/// <summary>
@@ -152,6 +154,68 @@ namespace CollisionBuddy
 		public Vector2 Center()
 		{
 			return (Start + End) / 2.0f;
+		}
+
+		/// <summary>
+		/// Given a rectangle, create a list of lines with the normals pointing out
+		/// </summary>
+		/// <param name="rect"></param>
+		/// <returns></returns>
+		public static List<Line> OutsideRect(Rectangle rect)
+		{
+			List<Line> lines = new List<Line>();
+
+			//create the points we need
+			Vector2 upperLeft = new Vector2(rect.Left, rect.Top);
+			Vector2 upperRight = new Vector2(rect.Right, rect.Top);
+			Vector2 lowerLeft = new Vector2(rect.Left, rect.Bottom);
+			Vector2 lowerRight = new Vector2(rect.Right, rect.Bottom);
+
+			//create the lines
+			lines.Add(new Line(upperLeft, upperRight));
+			lines.Add(new Line(upperRight, lowerRight));
+			lines.Add(new Line(lowerRight, lowerLeft));
+			lines.Add(new Line(lowerLeft, upperLeft));
+
+			return lines;
+		}
+
+		/// <summary>
+		/// Given a rectangle, create a list of lines with the normals pointing in
+		/// </summary>
+		/// <param name="rect"></param>
+		/// <returns></returns>
+		public static List<Line> InsideRect(Rectangle rect)
+		{
+			List<Line> lines = new List<Line>();
+
+			//create the points we need
+			Vector2 upperLeft = new Vector2(rect.Left, rect.Top);
+			Vector2 upperRight = new Vector2(rect.Right, rect.Top);
+			Vector2 lowerLeft = new Vector2(rect.Left, rect.Bottom);
+			Vector2 lowerRight = new Vector2(rect.Right, rect.Bottom);
+
+			//create the lines
+			lines.Add(new Line(upperLeft, lowerLeft));
+			lines.Add(new Line(lowerLeft, lowerRight));
+			lines.Add(new Line(lowerRight, upperRight));
+			lines.Add(new Line(upperRight, upperLeft));
+
+			return lines;
+		}
+
+		/// <summary>
+		/// draw the line with normal
+		/// </summary>
+		/// <param name="prim"></param>
+		/// <param name="color"></param>
+		public void Draw(IBasicPrimitive prim, Color color)
+		{
+			//draw the line
+			prim.Line(Start, End, color);
+
+			//draw the normal
+			prim.Line(Center(), Center() + (Normal * (Length * 0.1f)), color);
 		}
 
 		#endregion //Methods
