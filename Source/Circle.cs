@@ -1,6 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using BasicPrimitiveBuddy;
+using Microsoft.Xna.Framework;
 using System;
-using BasicPrimitiveBuddy;
 
 namespace CollisionBuddy
 {
