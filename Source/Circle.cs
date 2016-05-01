@@ -1,4 +1,4 @@
-﻿using BasicPrimitiveBuddy;
+﻿using PrimitiveBuddy;
 using Microsoft.Xna.Framework;
 using System;
 
@@ -188,7 +188,7 @@ namespace CollisionBuddy
 		/// </summary>
 		/// <param name="prim"></param>
 		/// <param name="color"></param>
-		public void Draw(IBasicPrimitive prim, Color color)
+		public void Draw(IPrimitive prim, Color color)
 		{
 			prim.Circle(Pos, Radius, color);
 		}
