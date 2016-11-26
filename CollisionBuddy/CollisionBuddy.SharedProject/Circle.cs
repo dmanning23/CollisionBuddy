@@ -7,7 +7,7 @@ namespace CollisionBuddy
 	/// <summary>
 	/// This is a simple circle class... it has a center and a radius, that's about it
 	/// </summary>
-	public class Circle
+	public class Circle : ICircle
 	{
 		#region Members
 

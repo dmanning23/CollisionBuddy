@@ -8,7 +8,7 @@ namespace CollisionBuddy
 	/// <summary>
 	/// A line class... it has a start and end point, and all the properties that entails.
 	/// </summary>
-	public class Line
+	public class Line : ILine
 	{
 		#region Members
 

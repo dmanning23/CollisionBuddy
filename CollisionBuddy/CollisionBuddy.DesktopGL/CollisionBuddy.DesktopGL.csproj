@@ -47,7 +47,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="RandomExtensions.DesktopGL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RandomExtensions.dmanning23.1.0.0\lib\net452\RandomExtensions.DesktopGL.dll</HintPath>
+      <HintPath>..\packages\RandomExtensions.dmanning23.1.0.2\lib\net452\RandomExtensions.DesktopGL.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -64,20 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Source\Circle.cs">
-      <Link>Circle.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\CollisionBuddy.cs">
-      <Link>CollisionBuddy.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\Line.cs">
-      <Link>Line.cs</Link>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <Import Project="..\CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

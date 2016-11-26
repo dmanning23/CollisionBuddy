@@ -17,7 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CollisionBuddy.nuspec = CollisionBuddy.nuspec
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CollisionBuddy.SharedProject", "CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.shproj", "{090C2DC5-EC6C-4543-96D6-0B5F67134CE3}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{17d8f5dd-0564-4db0-96bd-8fd4e6fdab6b}*SharedItemsImports = 4
+		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{090c2dc5-ec6c-4543-96d6-0b5f67134ce3}*SharedItemsImports = 13
+		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{6f5cc3ea-615e-4b5b-9a05-fdffaf8bf311}*SharedItemsImports = 4
+		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{870f4306-475a-4846-9135-e571ef822091}*SharedItemsImports = 4
+		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{c0f2820c-e3cc-4339-b636-5c70070a6026}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppStore|Any CPU = AppStore|Any CPU
 		AppStore|ARM = AppStore|ARM
@@ -81,14 +90,14 @@ Global
 		{C0F2820C-E3CC-4339-B636-5C70070A6026}.Release|x64.Build.0 = Release|Any CPU
 		{C0F2820C-E3CC-4339-B636-5C70070A6026}.Release|x86.ActiveCfg = Release|Any CPU
 		{C0F2820C-E3CC-4339-B636-5C70070A6026}.Release|x86.Build.0 = Release|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|Any CPU.ActiveCfg = AppStore|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|Any CPU.Build.0 = AppStore|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|ARM.ActiveCfg = AppStore|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|ARM.Build.0 = AppStore|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x64.ActiveCfg = AppStore|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x64.Build.0 = AppStore|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x86.ActiveCfg = AppStore|Any CPU
-		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x86.Build.0 = AppStore|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|ARM.Build.0 = Release|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x64.Build.0 = Release|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{870F4306-475A-4846-9135-E571EF822091}.AppStore|x86.Build.0 = Release|Any CPU
 		{870F4306-475A-4846-9135-E571EF822091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{870F4306-475A-4846-9135-E571EF822091}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{870F4306-475A-4846-9135-E571EF822091}.Debug|ARM.ActiveCfg = Debug|Any CPU

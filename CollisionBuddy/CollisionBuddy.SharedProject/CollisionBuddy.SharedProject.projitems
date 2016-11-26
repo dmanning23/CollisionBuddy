@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>090c2dc5-ec6c-4543-96d6-0b5f67134ce3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CollisionBuddy.SharedProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Circle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CollisionBuddy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ICircle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ICollidable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ILine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Line.cs" />
+  </ItemGroup>
+</Project>

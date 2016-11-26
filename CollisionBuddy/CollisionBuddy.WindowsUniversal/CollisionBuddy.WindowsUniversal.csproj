@@ -107,18 +107,10 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Source\Circle.cs">
-      <Link>Circle.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\CollisionBuddy.cs">
-      <Link>CollisionBuddy.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\Line.cs">
-      <Link>Line.cs</Link>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\CollisionBuddy.WindowsUniversal.rd.xml" />
   </ItemGroup>
+  <Import Project="..\CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
