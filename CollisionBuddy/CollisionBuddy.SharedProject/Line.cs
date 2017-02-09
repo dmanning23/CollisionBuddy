@@ -177,9 +177,9 @@ namespace CollisionBuddy
 		/// </summary>
 		/// <param name="rect"></param>
 		/// <returns></returns>
-		public static List<Line> InsideRect(Rectangle rect)
+		public static List<ILine> InsideRect(Rectangle rect)
 		{
-			List<Line> lines = new List<Line>();
+			var lines = new List<ILine>();
 
 			//create the points we need
 			Vector2 upperLeft = new Vector2(rect.Left, rect.Top);
@@ -201,9 +201,9 @@ namespace CollisionBuddy
 		/// </summary>
 		/// <param name="rect"></param>
 		/// <returns></returns>
-		public static List<Line> OutsideRect(Rectangle rect)
+		public static List<ILine> OutsideRect(Rectangle rect)
 		{
-			List<Line> lines = new List<Line>();
+			var lines = new List<ILine>();
 
 			//create the points we need
 			Vector2 upperLeft = new Vector2(rect.Left, rect.Top);

@@ -9,6 +9,5 @@ namespace CollisionBuddy
 		float Radius { get; set; }
 
 		float RadiusSquared { get; }
-
 	}
 }
