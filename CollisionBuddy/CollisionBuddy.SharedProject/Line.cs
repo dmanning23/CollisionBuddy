@@ -197,6 +197,37 @@ namespace CollisionBuddy
 		}
 
 		/// <summary>
+		/// Given a rectangle, create a list of lines with the normals pointing in
+		/// </summary>
+		/// <param name="rect"></param>
+		/// <returns></returns>
+		public static List<ILine> ExtendedInsideRect(Rectangle rect, float extend)
+		{
+			var lines = new List<ILine>();
+
+			//create the points we need
+			Vector2 upperLeft = new Vector2(rect.Left, rect.Top);
+			Vector2 upperRight = new Vector2(rect.Right, rect.Top);
+			Vector2 lowerLeft = new Vector2(rect.Left, rect.Bottom);
+			Vector2 lowerRight = new Vector2(rect.Right, rect.Bottom);
+
+			//create the lines
+			lines.Add(new Line(new Vector2(upperLeft.X - extend, upperLeft.Y),
+				new Vector2(upperRight.X + extend, upperRight.Y)));
+
+			lines.Add(new Line(new Vector2(upperRight.X, upperRight.Y - extend),
+				new Vector2(lowerRight.X, lowerRight.Y + extend)));
+
+			lines.Add(new Line(new Vector2(lowerRight.X + extend, lowerRight.Y),
+				new Vector2(lowerLeft.X - extend, lowerLeft.Y)));
+
+			lines.Add(new Line(new Vector2(lowerLeft.X, lowerLeft.Y + extend),
+				new Vector2(upperLeft.X, upperLeft.Y - extend)));
+
+			return lines;
+		}
+
+		/// <summary>
 		/// Given a rectangle, create a list of lines with the normals pointing out
 		/// </summary>
 		/// <param name="rect"></param>
