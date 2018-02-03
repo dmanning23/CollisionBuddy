@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>CollisionBuddy</id>
-		<version>1.0.3</version>
+		<version>1.0.4</version>
 		<title>CollisionBuddy</title>
 		<authors>dmanning23</authors>
 		<owners>dmanning23</owners>
@@ -41,7 +41,7 @@
 			</group>
 
 			<group targetFramework="net451">
-				<dependency id="MonoGame.Framework.DesktopGL" version="3.5"/>
+				<dependency id="MonoGame.Framework.WindowsDX" version="3.5"/>
 				<dependency id="PrimitiveBuddy" version="1.0"/>
 				<dependency id="RandomExtensions.dmanning23" version="1.0"/>
 				<dependency id="Vector2Extensions" version="1.0.1"/>
@@ -63,9 +63,9 @@
 		<file src="CollisionBuddy.WindowsUniversal\bin\Release\CollisionBuddy.WindowsUniversal.pdb" target="lib\uap10.0\CollisionBuddy.WindowsUniversal.pdb" />
 		<file src="CollisionBuddy.WindowsUniversal\bin\Release\CollisionBuddy.WindowsUniversal.dll" target="lib\uap10.0\CollisionBuddy.WindowsUniversal.dll" />
 
-		<!--DesktopGL-->
-		<file src="CollisionBuddy.DesktopGL\bin\Release\CollisionBuddy.DesktopGL.pdb" target="lib\net451\CollisionBuddy.DesktopGL.pdb" />
-		<file src="CollisionBuddy.DesktopGL\bin\Release\CollisionBuddy.DesktopGL.dll" target="lib\net451\CollisionBuddy.DesktopGL.dll" />
+		<!--WindowsDX-->
+		<file src="CollisionBuddy.WindowsDX\bin\Release\CollisionBuddy.WindowsDX.pdb" target="lib\net451\CollisionBuddy.WindowsDX.pdb" />
+		<file src="CollisionBuddy.WindowsDX\bin\Release\CollisionBuddy.WindowsDX.dll" target="lib\net451\CollisionBuddy.WindowsDX.dll" />
 
 	</files>
 </package>
