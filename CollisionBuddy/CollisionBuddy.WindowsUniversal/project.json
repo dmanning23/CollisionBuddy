@@ -1,11 +1,11 @@
 ﻿{
   "dependencies": {
-    "MatrixExtensions": "1.0.3",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "MonoGame.Framework.WindowsUniversal": "3.6.0.1625",
-    "PrimitiveBuddy": "1.0.4",
-    "RandomExtensions.dmanning23": "1.0.5",
-    "Vector2Extensions": "1.0.9"
+    "MatrixExtensions": "2.0.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.2",
+    "MonoGame.Framework.WindowsUniversal": "3.7.0.1708",
+    "PrimitiveBuddy": "2.0.0",
+    "RandomExtensions.dmanning23": "2.0.0",
+    "Vector2Extensions": "2.0.0"
   },
   "frameworks": {
     "uap10.0.10586": {}

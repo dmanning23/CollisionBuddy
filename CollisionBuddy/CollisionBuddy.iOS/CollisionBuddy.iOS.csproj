@@ -11,6 +11,8 @@
     <RootNamespace>CollisionBuddy.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>CollisionBuddy.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,22 +34,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MatrixExtensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MatrixExtensions.1.0.3\lib\Xamarin.iOS10\MatrixExtensions.iOS.dll</HintPath>
+      <HintPath>..\packages\MatrixExtensions.2.0.0\lib\Xamarin.iOS10\MatrixExtensions.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MonoGame.Framework.iOS.3.6.0.1625\lib\XamariniOS\MonoGame.Framework.dll</HintPath>
+    <Reference Include="MonoGame.Framework, Version=3.7.0.1708, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.iOS.3.7.0.1708\lib\XamariniOS\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="PrimitiveBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PrimitiveBuddy.1.0.4\lib\Xamarin.iOS10\PrimitiveBuddy.iOS.dll</HintPath>
+      <HintPath>..\packages\PrimitiveBuddy.2.0.0\lib\Xamarin.iOS10\PrimitiveBuddy.iOS.dll</HintPath>
     </Reference>
     <Reference Include="RandomExtensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RandomExtensions.dmanning23.1.0.5\lib\Xamarin.iOS10\RandomExtensions.iOS.dll</HintPath>
+      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.0\lib\Xamarin.iOS10\RandomExtensions.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Vector2Extensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vector2Extensions.1.0.9\lib\Xamarin.iOS10\Vector2Extensions.iOS.dll</HintPath>
+      <HintPath>..\packages\Vector2Extensions.2.0.0\lib\Xamarin.iOS10\Vector2Extensions.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
@@ -62,4 +64,11 @@
   </ItemGroup>
   <Import Project="..\CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\MonoGame.Framework.iOS.3.7.0.1708\build\MonoGame.Framework.iOS.targets" Condition="Exists('..\packages\MonoGame.Framework.iOS.3.7.0.1708\build\MonoGame.Framework.iOS.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MonoGame.Framework.iOS.3.7.0.1708\build\MonoGame.Framework.iOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.iOS.3.7.0.1708\build\MonoGame.Framework.iOS.targets'))" />
+  </Target>
 </Project>
