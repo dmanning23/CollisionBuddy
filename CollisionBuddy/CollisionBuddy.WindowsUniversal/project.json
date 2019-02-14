@@ -2,7 +2,7 @@
   "dependencies": {
     "MatrixExtensions": "2.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.2",
-    "MonoGame.Framework.WindowsUniversal": "3.7.0.1708",
+    "MonoGame.Framework.WindowsUniversal": "3.7.1.189",
     "PrimitiveBuddy": "2.0.0",
     "RandomExtensions.dmanning23": "2.0.0",
     "Vector2Extensions": "2.0.0"
