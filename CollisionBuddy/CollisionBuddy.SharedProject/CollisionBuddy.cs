@@ -54,9 +54,9 @@ namespace CollisionBuddy
 		/// </summary>
 		/// <param name="A">teh first circle</param>
 		/// <param name="B">the second circle</param>
-		/// <param name="ClosestPointA">the closet point of circle A to circle B</param>
-		/// <param name="ClosestPointB">the closet point of circle B to circle A</param>
-		public static void ClosestPoints(Circle A, Circle B, ref Vector2 ClosestPointA, ref Vector2 ClosestPointB)
+		/// <param name="closestPointA">the closet point of circle A to circle B</param>
+		/// <param name="closestPointB">the closet point of circle B to circle A</param>
+		public static void ClosestPoints(Circle A, Circle B, ref Vector2 closestPointA, ref Vector2 closestPointB)
 		{
 			//get the direction of the vector between the circles
 			Vector2 lineDirection2 = A.Pos - B.Pos;
@@ -68,10 +68,10 @@ namespace CollisionBuddy
 			Vector2 center2collision2 = lineDirection2 * B.Radius;
 
 			//get the first collision point
-			ClosestPointA = A.Pos + center2collision1;
+			closestPointA = A.Pos + center2collision1;
 
 			//get the second collision point
-			ClosestPointB = B.Pos + center2collision2;
+			closestPointB = B.Pos + center2collision2;
 		}
 
 		/// <summary>
@@ -80,39 +80,39 @@ namespace CollisionBuddy
 		/// </summary>
 		/// <param name="A">the circle to check</param>
 		/// <param name="B">the line to check</param>
-		/// <param name="ClosestPointA">if a collision is occuring, the closet point on the circle to the line</param>
-		/// <param name="ClosestPointB">if a collision is occuring, the closest point on the line to the circle</param>
+		/// <param name="closestPointA">if a collision is occuring, the closet point on the circle to the line</param>
+		/// <param name="closestPointB">if a collision is occuring, the closest point on the line to the circle</param>
 		/// <returns>true if the circle and line are colliding, false if not</returns>
-		public static bool CircleLineCollision(Circle A, Line B, ref Vector2 ClosestPointA, ref Vector2 ClosestPointB)
+		public static bool CircleLineCollision(Circle A, Line B, ref Vector2 closestPointA, ref Vector2 closestPointB)
 		{
 			//get the vector from the circle center to the start of the line segment
 			Vector2 CV = A.Pos - B.Start;
 
 			//project the CV onto the line segment
-			float ProjL = Vector2.Dot(B.Direction, CV);
+			float projL = Vector2.Dot(B.Direction, CV);
 
-			if (ProjL < 0)
+			if (projL < 0)
 			{
 				//the closest point on the line is the start point
-				float fCirlclDot = Vector2.Dot(CV, CV);
-				if (fCirlclDot > A.RadiusSquared)
+				float circleDot = Vector2.Dot(CV, CV);
+				if (circleDot > A.RadiusSquared)
 				{
 					//There is no collision
 					return false;
 				}
 				else
 				{
-					ClosestPointB = B.Start;
+					closestPointB = B.Start;
 
 					//get the collision point on the circle
 					CV.Normalize();
 					Vector2 CenterToEdge = CV * A.Radius;
-					ClosestPointA = A.Pos - CenterToEdge;
+					closestPointA = A.Pos - CenterToEdge;
 
 					return true;
 				}
 			}
-			else if (ProjL > B.Length)
+			else if (projL > B.Length)
 			{
 				//get the vector of the line segment
 				Vector2 lineVect = B.End - B.Start;
@@ -127,13 +127,13 @@ namespace CollisionBuddy
 				}
 				else
 				{
-					ClosestPointB = B.End;
+					closestPointB = B.End;
 
 					//get the collision point on the circle
 					CV = A.Pos - B.End;
 					CV.Normalize();
 					Vector2 CenterToEdge = CV * A.Radius;
-					ClosestPointA = A.Pos - CenterToEdge;
+					closestPointA = A.Pos - CenterToEdge;
 
 					return true;
 				}
@@ -141,7 +141,7 @@ namespace CollisionBuddy
 			else
 			{
 				//The closest point is a midpoint on the line segemnt
-				Vector2 VProj = B.Direction * ProjL;
+				Vector2 VProj = B.Direction * projL;
 				Vector2 ClosePoint = B.Start + VProj;
 
 				//if the dot product of the vector from the closest point and itself is less than the radius squared, there is a collision
@@ -152,13 +152,13 @@ namespace CollisionBuddy
 				}
 				else
 				{
-					ClosestPointB = ClosePoint;
+					closestPointB = ClosePoint;
 
 					//get the collision point on the circle
 					CV = A.Pos - ClosePoint;
 					CV.Normalize();
 					Vector2 CenterToEdge = CV * A.Radius;
-					ClosestPointA = A.Pos - CenterToEdge;
+					closestPointA = A.Pos - CenterToEdge;
 					return true;
 				}
 			}
@@ -169,97 +169,97 @@ namespace CollisionBuddy
 		/// Find if the circle is hitting the wall, where it is hitting the wall, and where to move it to put it back in the box
 		/// This function also prevents tunneling, if the circle totally leaves the rect it will pop back in
 		/// </summary>
-		/// <param name="A">The circle we are checking</param>
-		/// <param name="B">THe rectangle we are putting the circle in</param>
-		/// <param name="CollisionPoint">If the circle is touching the wall, the point where they are touching</param>
-		/// <param name="Overlap">A vector that you can add to the circle's position to put it back in the rect</param>
+		/// <param name="circle">The circle we are checking</param>
+		/// <param name="rectangle">THe rectangle we are putting the circle in</param>
+		/// <param name="collisionPoint">If the circle is touching the wall, the point where they are touching</param>
+		/// <param name="overlap">A vector that you can add to the circle's position to put it back in the rect</param>
 		/// <returns>true if the circle is outsied the edge of the rect, false if it is still all inside</returns>
-		public static bool CircleRectCollision(Circle A, Rectangle B, ref Vector2 CollisionPoint, ref Vector2 Overlap)
+		public static bool CircleRectCollision(Circle circle, Rectangle rectangle, ref Vector2 collisionPoint, ref Vector2 overlap)
 		{
 			//Get the delta from last frame to this one
-			Vector2 Velocity = A.OldPos - A.Pos;
+			Vector2 velocity = circle.OldPos - circle.Pos;
 
 			//get the velocity direction if it isn't zero
-			float fVelocityLength = 0.0f;
-			if (fVelocityLength > 0.0f)
+			var velocityLength = 0.0f;
+			if (velocityLength > 0.0f)
 			{
-				Velocity.Normalize();
+				velocity.Normalize();
 			}
 
 			//get the bottom of the circle
-			float fBottom = A.Pos.Y + A.Radius;
+			var bottom = circle.Pos.Y + circle.Radius;
 
 			//check for fast ground hits
-			float fFastBottom = fBottom + (Velocity.Y * fVelocityLength);
-			if (fFastBottom > B.Bottom)
+			var fastBottom = bottom + (velocity.Y * velocityLength);
+			if (fastBottom > rectangle.Bottom)
 			{
 				//a floor hit occured
 
 				//get the delta between the current pos and the ground
-				Overlap.X = 0.0f;
-				Overlap.Y = (B.Bottom - fBottom);
+				overlap.X = 0.0f;
+				overlap.Y = (rectangle.Bottom - bottom);
 
 				//get the point where they are colliding
-				CollisionPoint.X = A.Pos.X;
-				CollisionPoint.Y = B.Bottom;
+				collisionPoint.X = circle.Pos.X;
+				collisionPoint.Y = rectangle.Bottom;
 				return true;
 			}
 			else
 			{
 				//get the top of the polygon (will be fast bottom plus 2 * radius
-				float fFastTop = fFastBottom - (2.0f * A.Radius);
-				if (fFastTop < B.Top)
+				var fastTop = fastBottom - (2.0f * circle.Radius);
+				if (fastTop < rectangle.Top)
 				{
 					//a ceiling hit occured
 
 					//get the top of the polygon
-					float fTop = A.Pos.Y - A.Radius;
+					var top = circle.Pos.Y - circle.Radius;
 
 					//get the delta between the current pos and the ceiling
-					Overlap.X = 0.0f;
-					Overlap.Y = -1.0f * (fTop - B.Top);
+					overlap.X = 0.0f;
+					overlap.Y = -1.0f * (top - rectangle.Top);
 
 					//get the point where they are colliding
-					CollisionPoint.X = A.Pos.X;
-					CollisionPoint.Y = B.Top;
+					collisionPoint.X = circle.Pos.X;
+					collisionPoint.Y = rectangle.Top;
 					return true;
 				}
 			}
 
 			//get the right edge of the polygon
-			float fRight = A.Pos.X + A.Radius;
+			var right = circle.Pos.X + circle.Radius;
 
 			//check for fast right wall hits
-			float fFastRight = fRight + (Velocity.X * fVelocityLength);
-			if (fFastRight > B.Right)
+			var fastRight = right + (velocity.X * velocityLength);
+			if (fastRight > rectangle.Right)
 			{
 				//a right wall hit occured
 
 				//get the delta between the current pos and the right wall
-				Overlap.X = (B.Right - fFastRight);
-				Overlap.Y = 0.0f;
+				overlap.X = (rectangle.Right - fastRight);
+				overlap.Y = 0.0f;
 
 				//get the collision poitn
-				CollisionPoint.X = B.Right;
-				CollisionPoint.Y = A.Pos.Y;
+				collisionPoint.X = rectangle.Right;
+				collisionPoint.Y = circle.Pos.Y;
 				return true;
 			}
 			else
 			{
 				//get the left of the polygon (will be fast right plus 2 * radius
-				float fFastLeft = fFastRight - (2.0f * A.Radius);
-				if (fFastLeft < B.Left)
+				var fastLeft = fastRight - (2.0f * circle.Radius);
+				if (fastLeft < rectangle.Left)
 				{
 					//a left wall hit occured
 
 					//get the left edge of the polygon
-					float fLeft = A.Pos.X - A.Radius;
-					Overlap.X = -1.0f * (fLeft - B.Left);
-					Overlap.Y = 0.0f;
+					var left = circle.Pos.X - circle.Radius;
+					overlap.X = -1.0f * (left - rectangle.Left);
+					overlap.Y = 0.0f;
 
 					//get the collision poitn
-					CollisionPoint.X = B.Left;
-					CollisionPoint.Y = A.Pos.Y;
+					collisionPoint.X = rectangle.Left;
+					collisionPoint.Y = circle.Pos.Y;
 					return true;
 				}
 			}

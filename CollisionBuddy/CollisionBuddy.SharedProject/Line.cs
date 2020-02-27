@@ -10,26 +10,9 @@ namespace CollisionBuddy
 	/// </summary>
 	public class Line : ILine
 	{
-		#region Members
-
-		/// <summary>
-		/// The start point of this vector
-		/// </summary>
-		protected Vector2 _Start = Vector2.Zero;
-
-		/// <summary>
-		/// The end point of this vector
-		/// </summary>
-		protected Vector2 _End = Vector2.Zero;
-
-		/// <summary>
-		/// unit vector, the direction of the line
-		/// </summary>
-		protected Vector2 _direction = Vector2.Zero;
-
-		#endregion //Members
-
 		#region Properties
+
+		protected Vector2 _start = Vector2.Zero;
 
 		/// <summary>
 		/// update or get the start point... 
@@ -39,15 +22,17 @@ namespace CollisionBuddy
 		{
 			get
 			{
-				return _Start;
+				return _start;
 			}
 			set
 			{
-				OldStart = _Start;
-				_Start = value;
+				OldStart = _start;
+				_start = value;
 				Updated(); //set the length and direction
 			}
 		}
+
+		protected Vector2 _end = Vector2.Zero;
 
 		/// <summary>
 		/// update or get the start point... 
@@ -57,12 +42,12 @@ namespace CollisionBuddy
 		{
 			get
 			{
-				return _End;
+				return _end;
 			}
 			set
 			{
-				OldEnd = _End;
-				_End = value;
+				OldEnd = _end;
+				_end = value;
 				Updated(); //set the length and direction
 			}
 		}
@@ -81,6 +66,8 @@ namespace CollisionBuddy
 		/// the length of the line, world units
 		/// </summary>
 		public float Length { get; protected set; }
+
+		protected Vector2 _direction = Vector2.Zero;
 
 		/// <summary>
 		/// unit vector, the direction of the line
@@ -137,9 +124,9 @@ namespace CollisionBuddy
 		public void Initialize(Vector2 start, Vector2 end)
 		{
 			OldStart = start;
-			_Start = start;
+			_start = start;
 			OldEnd = end;
-			_End = end;
+			_end = end;
 			Updated();
 		}
 

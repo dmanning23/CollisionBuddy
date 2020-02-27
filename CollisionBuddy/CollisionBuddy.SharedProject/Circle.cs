@@ -9,40 +9,23 @@ namespace CollisionBuddy
 	/// </summary>
 	public class Circle : ICircle
 	{
-		#region Members
-
-		/// <summary>
-		/// the radius of the circle
-		/// </summary>
-		private float _fRadius = 0.0f;
-
-		/// <summary>
-		/// the radius squared of the circle
-		/// </summary>
-		private float _fRadiusSquared = 0.0f;
-
-		/// <summary>
-		/// The center point of this circle
-		/// </summary>
-		protected Vector2 _Position = Vector2.Zero;
-
-		#endregion //Members
-
 		#region Properties
 
+		protected Vector2 _position = Vector2.Zero;
+
 		/// <summary>
-		/// Update or get the position of this circle
+		/// Update or get the center position of this circle
 		/// </summary>
 		public Vector2 Pos
 		{
 			get
 			{
-				return _Position;
+				return _position;
 			}
 			set
 			{
-				OldPos = _Position;
-				_Position = value;
+				OldPos = _position;
+				_position = value;
 			}
 		}
 
@@ -51,6 +34,9 @@ namespace CollisionBuddy
 		/// </summary>
 		public Vector2 OldPos { get; set; }
 
+		private float _radius = 0.0f;
+		private float _radiusSquared = 0.0f;
+
 		/// <summary>
 		/// update or get the radius of this circle
 		/// </summary>
@@ -58,12 +44,12 @@ namespace CollisionBuddy
 		{
 			get
 			{
-				return _fRadius;
+				return _radius;
 			}
 			set
 			{
-				_fRadius = value;
-				_fRadiusSquared = value * value;
+				_radius = value;
+				_radiusSquared = value * value;
 			}
 		}
 
@@ -74,7 +60,7 @@ namespace CollisionBuddy
 		{
 			get
 			{
-				return _fRadiusSquared;
+				return _radiusSquared;
 			}
 		}
 
@@ -108,7 +94,7 @@ namespace CollisionBuddy
 		/// <param name="radius">the initial radius</param>
 		public void Initialize(Vector2 position, float radius)
 		{
-			_Position = position;
+			_position = position;
 			OldPos = position;
 			Radius = radius;
 		}
@@ -163,11 +149,11 @@ namespace CollisionBuddy
 		public void Translate(float x, float y)
 		{
 			//update the old position
-			OldPos = _Position;
+			OldPos = _position;
 
 			//set teh new postiionh
-			_Position.X += x;
-			_Position.Y += y;
+			_position.X += x;
+			_position.Y += y;
 		}
 
 		/// <summary>
@@ -177,10 +163,10 @@ namespace CollisionBuddy
 		public void Translate(Vector2 delta)
 		{
 			//update the old position
-			OldPos = _Position;
+			OldPos = _position;
 
 			//add the change to the position
-			_Position += delta;
+			_position += delta;
 		}
 
 		/// <summary>
