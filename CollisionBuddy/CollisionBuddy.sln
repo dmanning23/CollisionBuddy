@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C89759DA-1C08-4F16-959A-EA11B627EEE7}"
 	ProjectSection(SolutionItems) = preProject
 		buildNugetPackages.ps1 = buildNugetPackages.ps1
+		CollisionBuddy.Bridge.nuspec = CollisionBuddy.Bridge.nuspec
 		CollisionBuddy.nuspec = CollisionBuddy.nuspec
 	EndProjectSection
 EndProject
@@ -17,10 +18,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CollisionBuddy.SharedProjec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollisionBuddy.WindowsDX", "CollisionBuddy.WindowsDX\CollisionBuddy.WindowsDX.csproj", "{F9A07498-3135-4878-965F-9BD0D3870A65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollisionBuddy.Bridge", "CollisionBuddy.Bridge\CollisionBuddy.Bridge.csproj", "{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{090c2dc5-ec6c-4543-96d6-0b5f67134ce3}*SharedItemsImports = 13
 		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{870f4306-475a-4846-9135-e571ef822091}*SharedItemsImports = 4
+		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{b9fcc45d-dab1-4c81-b793-1b2ecb33ae54}*SharedItemsImports = 4
 		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{c0f2820c-e3cc-4339-b636-5c70070a6026}*SharedItemsImports = 4
 		CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems*{f9a07498-3135-4878-965f-9bd0d3870a65}*SharedItemsImports = 4
 	EndGlobalSection
@@ -111,6 +115,30 @@ Global
 		{F9A07498-3135-4878-965F-9BD0D3870A65}.Release|x64.Build.0 = Release|Any CPU
 		{F9A07498-3135-4878-965F-9BD0D3870A65}.Release|x86.ActiveCfg = Release|Any CPU
 		{F9A07498-3135-4878-965F-9BD0D3870A65}.Release|x86.Build.0 = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|ARM.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|ARM.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|x64.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|x64.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|x86.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.AppStore|x86.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|x64.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Debug|x86.Build.0 = Debug|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|ARM.Build.0 = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|x64.ActiveCfg = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|x64.Build.0 = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|x86.ActiveCfg = Release|Any CPU
+		{B9FCC45D-DAB1-4C81-B793-1B2ECB33AE54}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

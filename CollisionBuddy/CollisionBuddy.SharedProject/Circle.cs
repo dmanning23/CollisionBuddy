@@ -118,13 +118,13 @@ namespace CollisionBuddy
 		public float GetXDistance(Vector2 position)
 		{
 			//subtract point x location from my x location
-			float fDistance = Pos.X - position.X;
+			float distance = Pos.X - position.X;
 
 			//get abs value of that distance
-			fDistance = Math.Abs(fDistance);
+			distance = (float)Math.Abs(distance);
 
 			//subtract radius
-			return fDistance - Radius;
+			return distance - Radius;
 		}
 
 		/// <summary>

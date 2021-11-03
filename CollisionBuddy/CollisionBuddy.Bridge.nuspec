@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>CollisionBuddy.Bridge</id>
+		<version>2.1.0</version>
+		<title>CollisionBuddy.Bridge</title>
+		<authors>dmanning23</authors>
+		<owners>dmanning23</owners>
+		<projectUrl>https://github.com/dmanning23/CollisionBuddy</projectUrl>
+		<licenseUrl>https://github.com/dmanning23/CollisionBuddy/blob/master/LICENSE.txt</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Monogame library for circle/line and tunnel-free circle/circle collision detection.</description>
+		<releaseNotes />
+		<copyright>Copyright 2016</copyright>
+		<tags>pcl, windows phone, winphone, android, ios, windows universal, monogame</tags>
+		<dependencies>
+			
+			<group targetFramework="net47">
+				<dependency id="MonoGame.Framework.Bridge" version="3.7"/>
+				<dependency id="PrimitiveBuddy.Bridge" version="2.0"/>
+				<dependency id="RandomExtensions.Bridge.dmanning23" version="2.0"/>
+				<dependency id="Vector2Extensions.Bridge" version="2.0"/>
+			</group>
+
+		</dependencies>
+	</metadata>
+	<files>
+
+		<file src="CollisionBuddy.Bridge\bin\Release\CollisionBuddy.Bridge.pdb" target="lib\net47\CollisionBuddy.Bridge.pdb" />
+		<file src="CollisionBuddy.Bridge\bin\Release\CollisionBuddy.Bridge.dll" target="lib\net47\CollisionBuddy.Bridge.dll" />
+
+	</files>
+</package>
