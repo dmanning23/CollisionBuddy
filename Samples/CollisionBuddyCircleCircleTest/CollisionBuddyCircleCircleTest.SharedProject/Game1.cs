@@ -37,8 +37,7 @@ namespace CollisionBuddyCircleCircleTest
 
 			_clock = new GameClock();
 			_inputState = new InputState();
-			_inputWrapper = new InputWrapper(new ControllerWrapper(PlayerIndex.One, true), _clock.GetCurrentTime);
-			_inputWrapper.Controller.UseKeyboard = true;
+			_inputWrapper = new InputWrapper(new ControllerWrapper(0), _clock.GetCurrentTime);
 		}
 
 		/// <summary>
