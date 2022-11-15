@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30406.217
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollisionBuddySample.DesktopGL", "CollisionBuddySample.DesktopGL\CollisionBuddySample.DesktopGL.csproj", "{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}"
 EndProject
@@ -12,12 +12,6 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CollisionBuddySample.SharedProject", "CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.shproj", "{2925287E-ADFD-4F8F-A4E2-E4D99AB5CB81}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{2925287e-adfd-4f8f-a4e2-e4d99ab5cb81}*SharedItemsImports = 13
-		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{97bb67a4-6ca0-43c6-bfc4-19e13bac72e4}*SharedItemsImports = 4
-		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{c78fa9ef-8eb3-48cc-aeda-93919bbc26f0}*SharedItemsImports = 4
-		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{edd1a4bb-2cff-4f63-b7a8-4538f24c3929}*SharedItemsImports = 4
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
@@ -69,7 +63,8 @@ Global
 		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.AppStore|x64.Build.0 = Release|x86
 		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.AppStore|x86.ActiveCfg = Release|x86
 		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.AppStore|x86.Build.0 = Release|x86
-		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.Debug|ARM.ActiveCfg = Debug|x86
 		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.Debug|iPhone.ActiveCfg = Debug|x86
 		{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
@@ -171,7 +166,8 @@ Global
 		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
 		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.AppStore|x64.ActiveCfg = AppStore|iPhone
 		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.AppStore|x86.ActiveCfg = AppStore|iPhone
-		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{C78FA9EF-8EB3-48CC-AEDA-93919BBC26F0}.Debug|iPhone.Build.0 = Debug|iPhone
@@ -193,6 +189,12 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5899C73-5C19-4797-98EC-22E614C13400}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{2925287e-adfd-4f8f-a4e2-e4d99ab5cb81}*SharedItemsImports = 13
+		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{97bb67a4-6ca0-43c6-bfc4-19e13bac72e4}*SharedItemsImports = 4
+		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{c78fa9ef-8eb3-48cc-aeda-93919bbc26f0}*SharedItemsImports = 4
+		CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems*{edd1a4bb-2cff-4f63-b7a8-4538f24c3929}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = CircleRectTest.csproj
