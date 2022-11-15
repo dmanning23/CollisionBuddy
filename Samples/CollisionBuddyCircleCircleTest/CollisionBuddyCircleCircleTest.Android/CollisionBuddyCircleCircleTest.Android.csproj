@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55A0626E-1435-445A-9C3B-F432272CACF3}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CollisionBuddyCircleCircleTest.Android</RootNamespace>
+    <AssemblyName>CollisionBuddyCircleCircleTest.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions>.m4a</AndroidStoreUncompressedFileExtensions>
+    <MandroidI18n />
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <MonoGamePlatform>Android</MonoGamePlatform>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CollisionBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CollisionBuddy.1.0.0\lib\MonoAndroid10\CollisionBuddy.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FilenameBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FilenameBuddy.1.0.2\lib\MonoAndroid10\FilenameBuddy.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GameTimer.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GameTimer.1.0.1\lib\MonoAndroid10\GameTimer.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HadoukInput.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HadoukInput.1.0.0\lib\MonoAndroid10\HadoukInput.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MatrixExtensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MatrixExtensions.1.0.0\lib\MonoAndroid10\MatrixExtensions.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="MonoGame.Framework, Version=3.5.1.1679, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.Android.3.5.1.1679\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="PrimitiveBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PrimitiveBuddy.1.0.0\lib\MonoAndroid10\PrimitiveBuddy.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RandomExtensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RandomExtensions.dmanning23.1.0.2\lib\MonoAndroid10\RandomExtensions.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vector2Extensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vector2Extensions.1.0.1\lib\MonoAndroid10\Vector2Extensions.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XmlBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XmlBuddy.1.0.2\lib\MonoAndroid10\XmlBuddy.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Resources\Layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <Import Project="..\CollisionBuddyCircleCircleTest.SharedProject\CollisionBuddyCircleCircleTest.SharedProject.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

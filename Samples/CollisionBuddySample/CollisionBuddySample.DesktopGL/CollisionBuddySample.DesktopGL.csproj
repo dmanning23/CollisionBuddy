@@ -1,49 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F9A07498-3135-4878-965F-9BD0D3870A65}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDD1A4BB-2CFF-4F63-B7A8-4538F24C3929}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CollisionBuddy.WindowsDX</RootNamespace>
-    <AssemblyName>CollisionBuddy.WindowsDX</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>CollisionBuddySample.DesktopGL</RootNamespace>
+    <AssemblyName>CollisionBuddySample.DesktopGL</AssemblyName>
     <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;LINUX</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;LINUX</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CollisionBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CollisionBuddy.2.0.2\lib\net451\CollisionBuddy.WindowsDX.dll</HintPath>
+    </Reference>
+    <Reference Include="FilenameBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FilenameBuddy.2.0.8\lib\net452\FilenameBuddy.WindowsDX.dll</HintPath>
+    </Reference>
+    <Reference Include="GameTimer.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GameTimer.2.1.0\lib\net452\GameTimer.WindowsDX.dll</HintPath>
+    </Reference>
+    <Reference Include="HadoukInput.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HadoukInput.2.0.32\lib\net451\HadoukInput.WindowsDX.dll</HintPath>
+    </Reference>
     <Reference Include="MatrixExtensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MatrixExtensions.2.0.1\lib\net451\MatrixExtensions.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\MatrixExtensions.2.0.0\lib\net451\MatrixExtensions.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="PrimitiveBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PrimitiveBuddy.2.0.4\lib\net451\PrimitiveBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\PrimitiveBuddy.2.0.1\lib\net451\PrimitiveBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="RandomExtensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.2\lib\net452\RandomExtensions.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.0\lib\net452\RandomExtensions.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
@@ -73,26 +97,28 @@
       <HintPath>..\packages\SharpDX.XInput.4.2.0\lib\net45\SharpDX.XInput.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Vector2Extensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vector2Extensions.2.0.3\lib\net451\Vector2Extensions.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\Vector2Extensions.2.0.2\lib\net451\Vector2Extensions.WindowsDX.dll</HintPath>
+    </Reference>
+    <Reference Include="XmlBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XmlBuddy.2.0.1\lib\net451\XmlBuddy.WindowsDX.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Icon.ico" />
+    <Content Include="OpenTK.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="..\CollisionBuddy.SharedProject\CollisionBuddy.SharedProject.projitems" Label="Shared" />
+  <ItemGroup />
+  <Import Project="..\CollisionBuddySample.SharedProject\CollisionBuddySample.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Import Project="..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets" Condition="Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -100,4 +126,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets'))" />
   </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
