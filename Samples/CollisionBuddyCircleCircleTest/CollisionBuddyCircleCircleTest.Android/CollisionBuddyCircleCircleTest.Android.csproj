@@ -48,20 +48,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CollisionBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CollisionBuddy.2.1.0\lib\MonoAndroid10\CollisionBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\CollisionBuddy.4.0.0\lib\MonoAndroid10\CollisionBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="FilenameBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FilenameBuddy.2.0.14\lib\MonoAndroid10\FilenameBuddy.Android.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\FilenameBuddy.4.0.0\lib\MonoAndroid10\FilenameBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="GameTimer.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GameTimer.2.3.0\lib\MonoAndroid10\GameTimer.Android.dll</HintPath>
+      <HintPath>..\packages\GameTimer.4.0.0\lib\MonoAndroid10\GameTimer.Android.dll</HintPath>
     </Reference>
     <Reference Include="HadoukInput.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HadoukInput.2.0.34\lib\MonoAndroid10\HadoukInput.Android.dll</HintPath>
+      <HintPath>..\packages\HadoukInput.40.0.0\lib\MonoAndroid10\HadoukInput.Android.dll</HintPath>
     </Reference>
     <Reference Include="MatrixExtensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MatrixExtensions.2.0.1\lib\MonoAndroid10\MatrixExtensions.Android.dll</HintPath>
+      <HintPath>..\packages\MatrixExtensions.4.0.0\lib\MonoAndroid10\MatrixExtensions.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
@@ -72,20 +71,20 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PrimitiveBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PrimitiveBuddy.2.0.4\lib\MonoAndroid10\PrimitiveBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\PrimitiveBuddy.4.0.0\lib\MonoAndroid10\PrimitiveBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="RandomExtensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.2\lib\MonoAndroid10\RandomExtensions.Android.dll</HintPath>
+      <HintPath>..\packages\RandomExtensions.dmanning23.4.0.0\lib\MonoAndroid10\RandomExtensions.Android.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Vector2Extensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vector2Extensions.2.0.3\lib\MonoAndroid10\Vector2Extensions.Android.dll</HintPath>
+      <HintPath>..\packages\Vector2Extensions.4.0.0\lib\MonoAndroid10\Vector2Extensions.Android.dll</HintPath>
     </Reference>
     <Reference Include="XmlBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\XmlBuddy.2.0.8\lib\MonoAndroid10\XmlBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\XmlBuddy.4.0.0\lib\MonoAndroid10\XmlBuddy.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

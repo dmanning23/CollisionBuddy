@@ -105,19 +105,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CollisionBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CollisionBuddy.2.1.0\lib\Xamarin.iOS10\CollisionBuddy.iOS.dll</HintPath>
+      <HintPath>..\packages\CollisionBuddy.4.0.0\lib\Xamarin.iOS10\CollisionBuddy.iOS.dll</HintPath>
     </Reference>
     <Reference Include="FilenameBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FilenameBuddy.2.0.14\lib\Xamarin.iOS10\FilenameBuddy.iOS.dll</HintPath>
+      <HintPath>..\packages\FilenameBuddy.4.0.0\lib\Xamarin.iOS10\FilenameBuddy.iOS.dll</HintPath>
     </Reference>
     <Reference Include="GameTimer.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GameTimer.2.3.0\lib\Xamarin.iOS10\GameTimer.iOS.dll</HintPath>
+      <HintPath>..\packages\GameTimer.4.0.0\lib\Xamarin.iOS10\GameTimer.iOS.dll</HintPath>
     </Reference>
     <Reference Include="HadoukInput.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HadoukInput.2.0.34\lib\Xamarin.iOS10\HadoukInput.iOS.dll</HintPath>
+      <HintPath>..\packages\HadoukInput.40.0.0\lib\Xamarin.iOS10\HadoukInput.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MatrixExtensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MatrixExtensions.2.0.1\lib\Xamarin.iOS10\MatrixExtensions.iOS.dll</HintPath>
+      <HintPath>..\packages\MatrixExtensions.4.0.0\lib\Xamarin.iOS10\MatrixExtensions.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.iOS.3.7.1.189\lib\XamariniOS\MonoGame.Framework.dll</HintPath>
@@ -126,20 +126,20 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PrimitiveBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PrimitiveBuddy.2.0.4\lib\Xamarin.iOS10\PrimitiveBuddy.iOS.dll</HintPath>
+      <HintPath>..\packages\PrimitiveBuddy.4.0.0\lib\Xamarin.iOS10\PrimitiveBuddy.iOS.dll</HintPath>
     </Reference>
     <Reference Include="RandomExtensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.2\lib\Xamarin.iOS10\RandomExtensions.iOS.dll</HintPath>
+      <HintPath>..\packages\RandomExtensions.dmanning23.4.0.0\lib\Xamarin.iOS10\RandomExtensions.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Vector2Extensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vector2Extensions.2.0.3\lib\Xamarin.iOS10\Vector2Extensions.iOS.dll</HintPath>
+      <HintPath>..\packages\Vector2Extensions.4.0.0\lib\Xamarin.iOS10\Vector2Extensions.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
     <Reference Include="XmlBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\XmlBuddy.2.0.8\lib\Xamarin.iOS10\XmlBuddy.iOS.dll</HintPath>
+      <HintPath>..\packages\XmlBuddy.4.0.0\lib\Xamarin.iOS10\XmlBuddy.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -155,7 +155,6 @@
     <BundleResource Include="Default.png" />
     <BundleResource Include="GameThumbnail.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="..\CollisionBuddyCircleCircleTest.SharedProject\CollisionBuddyCircleCircleTest.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
